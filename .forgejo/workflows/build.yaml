@@ -1,0 +1,23 @@
+name: Build plugin
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-push:
+    runs-on: node-bookworm
+
+    steps:
+      - name: Checkout code
+        uses: https://data.forgejo.org/actions/checkout@v4
+      - name: Install dependencies
+        run: npm ci
+      - name: Build plugin
+        run: npm run dist
+      - name: Upload artifact
+        uses: https://data.forgejo.org/actions/upload-artifact@v3
+        with:
+          name: net.zblesk.joplin.csv-mode.jpl
+          path: publish/net.zblesk.joplin.csv-mode.jpl
