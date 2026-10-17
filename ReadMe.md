@@ -2,7 +2,7 @@
 
 A Joplin plugin that lets you view CSV data as pretty tables.
 
-![CSV mode](.\screens\CSV mode banner.png)
+![CSV mode](./screens/CSV mode banner.png)
 
 ## Overview
 
@@ -15,7 +15,7 @@ Delimiter, quote character and the other option defaults are configured within J
 
 The grid is built with [AG Grid Community](https://www.ag-grid.com/) and follows Joplin's light or dark theme.
 
-![CSV Mode demo](.\screens\CSV Mode demo.gif)
+![CSV Mode demo](./screens/CSV Mode demo.gif)
 
 ### Getting started
 
