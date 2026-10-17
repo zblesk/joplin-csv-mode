@@ -2,6 +2,8 @@
 
 A Joplin plugin that lets you view CSV data as pretty tables.
 
+![CSV mode](.\screens\CSV mode banner.png)
+
 ## Overview
 
 Step one always is telling Joplin that the current note is a CSV via the menu action or note toolbar button.
@@ -13,14 +15,16 @@ Delimiter, quote character and the other option defaults are configured within J
 
 The grid is built with [AG Grid Community](https://www.ag-grid.com/) and follows Joplin's light or dark theme.
 
+![CSV Mode demo](.\screens\CSV Mode demo.gif)
+
 ### Getting started
 
-1. Put CSV text in a note.
-2. Click the table button in the note toolbar, or use **Tools > Set up CSV mode**.
+1. Put CSV text into a note.
+2. Click the table button in the note toolbar, or use **Tools > Set up CSV mode for this note**.
 3. Check the delimiter and the other options in the dialog, then press OK (or Enter).
 
-The note re-opens as a table. (This doesn't seem to be supported quite well in the API - if it doesn't, just switch to a different note and back.) 
-To edit the file, use the "Toggle editor plugin" button (eye icon). 
+The note re-opens as a table. (This doesn't seem to be supported quite well in the API - if it doesn't, just switch to a different note and back.)  
+To edit the file, use the text mode - use the "Toggle editor plugin" button (eye icon).   
 To permanently unmark a file so it's no longer displayed as a CSV, open the same dialog and choose **This is not a CSV**.
 
 
@@ -55,7 +59,7 @@ Notes on the options:
 
 ### Global defaults
 
-Under **Settings > CSV Mode** you can set defaults used by notes that don't have their own value:
+Under **Settings > CSV Mode** you can set defaults:
 
 - **Default separator** (default `;`). Enter `\t` or `tab` for a tab.
 - **Default string escape** (default `"`).
@@ -80,7 +84,7 @@ When enabled, each row gets a checkbox and the header gets a select-all checkbox
 
 ## Limitations
 
-- The first row after any skipped lines is always treated as the header. There is no headerless mode.
+- The first row after any skipped lines is always treated as the header. 
 - The grid is read-only. To change data, edit the note's text without CSV mode. (You can switch to the text view by clicking the built-in eye icon.)
 - Ranges of cells can't be selected. Only single cells and whole rows can be copied.
 - Auto-sizing measures only the rows currently drawn in the grid, so in very long files the widths reflect the visible rows.
